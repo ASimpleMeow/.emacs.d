@@ -676,3 +676,12 @@ The =diminish= package will help solve this issue by hiding the modes from the m
     (diminish 'rainbow-delimiters-mode)
     (diminish 'rainbow-mode))
 #+END_SRC
+** Spell checking
+#+BEGIN_SRC emacs-lisp
+  (use-package flyspell
+    :ensure t
+    :init
+    (setq ispell-dictionary "en_GB")
+    (setq ispell-program-name (executable-find "aspell"))
+    (setq ispell-list-command "--list"))
+#+END_SRC
