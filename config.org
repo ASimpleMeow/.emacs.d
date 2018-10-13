@@ -594,6 +594,10 @@ For now I'll just add Latex
     (add-to-list 'load-path "/usr/share/emacs/site-lisp/tex-utils")
     (require 'xdvi-search))
 #+END_SRC
+Also set to use texi2dvi
+#+BEGIN_SRC emacs-lisp
+  (setq org-latex-pdf-process '("texi2dvi --pdf --clean --verbose --batch %f"))
+#+END_SRC
 * Minor stuff
 ** Electric
 Basically makes working with brackets much easier
